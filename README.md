@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motonikx - Himalayan & Desert Adventure Touring</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f87171; /* red-500 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* gray-800 */
+        }
+        .hero-bg {
+            /* Using multiple background images for a composite effect */
+            background-image: url('https://placehold.co/1920x800/27374D/ffffff?text=Himalayan+Road+Placeholder');
+            background-blend-mode: overlay;
+            background-color: rgba(15, 23, 42, 0.7); /* slate-900 overlay */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#f87171', // Tailwind red-500
+                        'accent-dark': '#0f172a', // Tailwind slate-900
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Brand Name -->
+            <div class="text-3xl font-extrabold tracking-tight">
+                <span class="text-white">MOTO</span><span class="text-primary-red">NIKX</span>
+            </div>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#hero" class="hover:text-primary-red transition duration-300">Home</a>
+                <a href="#tours" class="hover:text-primary-red transition duration-300">Tours</a>
+                <a href="#whyus" class="hover:text-primary-red transition duration-300">Why Us</a>
+                <a href="#contact" class="hover:text-primary-red transition duration-300">Book Now</a>
+            </div>
+            <!-- Mobile Menu Button (Optional, simple for a single page) -->
+            <div class="md:hidden">
+                <button class="text-white p-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                    <!-- Icon SVG for Menu -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-24 md:pt-32 pb-24 bg-cover bg-center hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <!-- Large, bold headline focused on Adventure -->
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight">
+                    <span class="block text-white">CONQUER THE PEAKS.</span>
+                    <span class="block text-primary-red">MASTER THE DUNES.</span>
+                </h1>
+                <!-- Subtitle/Slogan -->
+                <p class="text-xl sm:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
+                    Motonikx is your ultimate guide to premium adventure motorcycle touring across the mighty **Himalayas** and the vibrant **Deserts of India**.
+                </p>
+                <!-- Primary Call to Action Button -->
+                <a href="#tours" class="inline-block px-10 py-4 bg-primary-red text-white font-bold text-lg uppercase rounded-full shadow-lg hover:bg-red-600 transition duration-300 transform hover:scale-105">
+                    Find Your Adventure Tour
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Ride With Us (Replaces old Features/Advantage) -->
+        <section id="whyus" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-4">Why Ride With Motonikx?</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-4xl mx-auto">We blend vintage racing ethos with modern logistics to deliver an unforgettable, safe, and truly authentic experience.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature Card 1: Expert Guides -->
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <!-- Icon for Guide/Route -->
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.93V14.5l-2.08-1.56-1.92 1.56L7 14.94l2.08-1.56L7 11.82l1.92-1.56L11 11.82V7h2v6.82l2.08 1.56-1.92 1.56L13 14.5v3.43c-3.95-.49-7-3.84-7-7.93h2c0 3.32 2.68 6 6 6v2.93z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Veteran Leadership</h3>
+                        <p class="text-gray-400">Led by local experts and professional mechanics, our guides possess intimate knowledge of high-altitude and desert riding conditions.</p>
+                    </div>
+
+                    <!-- Feature Card 2: Unbeatable Routes -->
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <!-- Icon for Map/Route -->
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M21 3L3 10.5h15L3 21l18-7.5H6z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Curated Expeditions</h3>
+                        <p class="text-gray-400">We take you beyond the postcards, exploring hidden trails in Uttarakhand, the remote beauty of Himachal, and the legendary passes of Leh Ladakh.</p>
+                    </div>
+
+                    <!-- Feature Card 3: Safety & Support -->
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <!-- Icon for Safety/Shield -->
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14h2v2h-2v-2zm0-8h2v6h-2V7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Full Logistical Support</h3>
+                        <p class="text-gray-400">Enjoy the ride with peace of mind. Our tours include comprehensive backup vehicles, medical emergency support, and high-quality bike rentals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Showcase (Replaces old Products) -->
+        <section id="tours" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Epic Tour Destinations</h2>
+                <p class="text-center text-gray-400 mb-16 max-w-4xl mx-auto">Choose your terrain: from the highest motorable roads in the world to the timeless sands of the Thar Desert.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Tour Card 1: Leh Ladakh -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/4B5563/ffffff?text=Leh+Ladakh+Expedition" alt="Leh Ladakh Expedition" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Leh Ladakh Expedition</h3>
+                            <p class="text-gray-300 text-sm mb-4">Conquer Khardung La and Zojila. High-altitude adventure in the trans-Himalayan desert.</p>
+                            <button onclick="generateChecklist('Leh Ladakh Expedition', 'high-altitude cold weather and rugged terrain')" class="w-full py-2 bg-primary-red text-white rounded-lg hover:bg-red-600 transition duration-300 font-medium mt-2">✨ Gear Checklist</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 2: Rajasthan Deserts -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/FBBF24/1F2937?text=Rajasthan+Desert+Safari" alt="Rajasthan Desert Safari" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Rajasthan Desert Safari</h3>
+                            <p class="text-gray-300 text-sm mb-4">Golden dunes, ancient forts, and vibrant Rajasthani culture. A ride through history.</p>
+                            <button onclick="generateChecklist('Rajasthan Desert Safari', 'extreme dry heat and dust')" class="w-full py-2 bg-primary-red text-white rounded-lg hover:bg-red-600 transition duration-300 font-medium mt-2">✨ Gear Checklist</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 3: Himachal Pradesh -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/10B981/ffffff?text=Himachal+Traverse" alt="Himachal Pradesh Traverse" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Himachal Pradesh Traverse</h3>
+                            <p class="text-gray-300 text-sm mb-4">The raw, untouched beauty of Spiti and Lahaul Valley on two wheels.</p>
+                            <button onclick="generateChecklist('Himachal Pradesh Traverse', 'moderate mountain weather and river crossings')" class="w-full py-2 bg-primary-red text-white rounded-lg hover:bg-red-600 transition duration-300 font-medium mt-2">✨ Gear Checklist</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 4: Uttarakhand -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/3B82F6/ffffff?text=Uttarakhand+Himalayas" alt="Uttarakhand Himalayan Trails" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Uttarakhand Trails</h3>
+                            <p class="text-gray-300 text-sm mb-4">Deep forest trails and panoramic views in the 'Devbhoomi' (Land of the Gods).</p>
+                            <button onclick="generateChecklist('Uttarakhand Trails', 'humid mountain weather and monsoon readiness')" class="w-full py-2 bg-primary-red text-white rounded-lg hover:bg-red-600 transition duration-300 font-medium mt-2">✨ Gear Checklist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA / Testimonial Section (Adjusted for Touring Focus) -->
+        <section class="py-20 bg-primary-red/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <blockquote class="max-w-4xl mx-auto">
+                    <p class="text-3xl sm:text-4xl font-light italic text-gray-200 mb-6">
+                        "Motonikx didn't just organize a trip, they curated a life-changing expedition. The local knowledge and safety support were impeccable."
+                    </p>
+                    <footer class="text-lg font-semibold text-primary-red">- Sophie L., International Rider, Leh Ladakh 2024</footer>
+                </blockquote>
+                <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-primary-red text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+                    Book Your Seat Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Form / Information Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Start Your Expedition</h2>
+                <p class="text-center text-gray-400 mb-8 max-w-xl mx-auto">Ready to ride? Tell us which tour you are interested in and we'll send you a detailed itinerary and gear checklist.</p>
+
+
+                <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                        </div>
+                        <div>
+                            <label for="tour" class="block text-sm font-medium text-gray-300 mb-1">Interested Tour</label>
+                            <select id="tour" name="tour" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                                <option value="" disabled selected>Select an adventure...</option>
+                                <option value="leh-ladakh">Leh Ladakh Expedition</option>
+                                <option value="rajasthan">Rajasthan Desert Safari</option>
+                                <option value="himachal">Himachal Pradesh Traverse</option>
+                                <option value="uttarakhand">Uttarakhand Trails</option>
+                                <option value="custom">Custom/Private Tour</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Additional Comments</label>
+                            <textarea id="message" name="message" rows="4" placeholder="I have 3 riders in my group and need bike rentals..." class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-primary-red text-white font-bold text-lg rounded-lg shadow-md hover:bg-red-600 transition duration-300 transform hover:scale-[1.01]">
+                            Send Inquiry
+                        </button>
+                        <p class="text-center text-xs text-gray-500 mt-4">We cater to national and international riders.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-accent-dark py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="mb-4">
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">FAQ & Permits</a>
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">Gear Checklist</a>
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">Community Forum</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Motonikx. All Rights Reserved. Your Journey Starts Here.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Scroll to Top Button (hidden by default, shown via JS) -->
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 p-3 bg-primary-red rounded-full shadow-lg hover:bg-red-600 transition duration-300 opacity-0 pointer-events-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- Gear Checklist Modal -->
+    <div id="checklistModal" class="fixed inset-0 z-[100] bg-black bg-opacity-75 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-gray-700 flex justify-between items-center sticky top-0 bg-gray-800">
+                <h3 id="modalTitle" class="text-2xl font-bold text-primary-red">Gear Checklist</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white transition duration-200 p-2 rounded-full hover:bg-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <!-- Modal Body: Content generated by Gemini -->
+            <div id="modalContent" class="p-6 text-gray-300 space-y-4">
+                <div class="text-center py-10">
+                    <div role="status">
+                        <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary-red" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9171 97.0079 33.5532C95.2932 28.8251 92.871 24.3631 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.42797C69.6083 4.13117 63.3663 2.05581 56.9531 1.05108C51.7694 0.297426 46.4716 0.203998 41.2988 1.14814C32.9664 2.74853 25.4383 5.76012 18.9161 9.97684C12.4285 14.2603 6.81846 20.2526 3.69578 27.2001C1.04279 32.9157 0.399539 39.3093 1.09015 45.7277C1.94247 51.5273 4.54228 57.086 8.35626 61.545C12.0016 65.5971 16.486 69.1171 21.6836 71.9723C26.5412 74.8814 31.9168 76.974 37.5816 77.8398C42.1271 78.6923 46.7329 78.7183 51.3061 77.9234C56.6214 77.0673 61.7618 74.5683 66.3051 71.2589C70.9701 67.9254 74.9654 63.6644 78.0709 58.7408C82.1121 52.8879 84.6648 46.3315 85.8306 39.5446C86.741 33.9115 87.0544 28.1706 86.8408 22.4299L93.9676 39.0409Z" fill="url(#paint0_linear_94_115)" fill-opacity="0.3" transform="translate(4.8878 4.606)"/></g><defs><linearGradient id="paint0_linear_94_115" x1="4.888" x2="100" y1="24.585" y2="100.591" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
+                        <p class="text-lg mt-4 text-primary-red">Generating personalized checklist...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Citation Footer -->
+            <div id="citationFooter" class="p-4 bg-gray-700 text-xs text-gray-500 rounded-b-xl hidden">
+                <p class="font-semibold mb-1">Sources used for grounding:</p>
+                <ul id="sourceList" class="list-disc list-inside space-y-1">
+                    <!-- Sources will be injected here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript for smooth scrolling and scroll-to-top button -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global Firebase variables
+        let app;
+        let db;
+        let auth;
+        let userId = 'anonymous';
+
+        // LLM Configuration
+        const MODEL_NAME = "gemini-2.5-flash-preview-09-2025";
+        const API_KEY = "";
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent?key=${API_KEY}`;
+        
+        // --- Firebase Initialization (Required for Canvas API calls) ---
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Standard scroll functionality
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.onscroll = function() {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollTopBtn.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    scrollTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
+                    scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            };
+            scrollTopBtn.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Initialize Firebase and Auth
+            if (Object.keys(firebaseConfig).length > 0) {
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                setLogLevel('Debug');
+
+                try {
+                    if (initialAuthToken) {
+                        const userCredential = await signInWithCustomToken(auth, initialAuthToken);
+                        userId = userCredential.user.uid;
+                        console.log("Signed in with custom token:", userId);
+                    } else {
+                        const userCredential = await signInAnonymously(auth);
+                        userId = userCredential.user.uid;
+                        console.log("Signed in anonymously:", userId);
+                    }
+                } catch (error) {
+                    console.error("Firebase Auth Error:", error);
+                    // Fallback userId if auth fails
+                    userId = crypto.randomUUID();
+                }
+            } else {
+                console.warn("Firebase config not available. Running in standalone mode.");
+                userId = crypto.randomUUID();
+            }
+
+            // Make global functions available to the buttons
+            window.generateChecklist = generateChecklist;
+            window.closeModal = closeModal;
+        });
+
+        // --- Modal Control Functions ---
+        const checklistModal = document.getElementById('checklistModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const citationFooter = document.getElementById('citationFooter');
+        const sourceList = document.getElementById('sourceList');
+
+        function showLoading(title) {
+            checklistModal.classList.remove('hidden');
+            modalTitle.textContent = `✨ Preparing Checklist for ${title}`;
+            citationFooter.classList.add('hidden');
+            modalContent.innerHTML = `
+                <div class="text-center py-10">
+                    <div role="status">
+                        <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary-red" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/><path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9171 97.0079 33.5532C95.2932 28.8251 92.871 24.3631 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.42797C69.6083 4.13117 63.3663 2.05581 56.9531 1.05108C51.7694 0.297426 46.4716 0.203998 41.2988 1.14814C32.9664 2.74853 25.4383 5.76012 18.9161 9.97684C12.4285 14.2603 6.81846 20.2526 3.69578 27.2001C1.04279 32.9157 0.399539 39.3093 1.09015 45.7277C1.94247 51.5273 4.54228 57.086 8.35626 61.545C12.0016 65.5971 16.486 69.1171 21.6836 71.9723C26.5412 74.8814 31.9168 76.974 37.5816 77.8398C42.1271 78.6923 46.7329 78.7183 51.3061 77.9234C56.6214 77.0673 61.7618 74.5683 66.3051 71.2589C70.9701 67.9254 74.9654 63.6644 78.0709 58.7408C82.1121 52.8879 84.6648 46.3315 85.8306 39.5446C86.741 33.9115 87.0544 28.1706 86.8408 22.4299L93.9676 39.0409Z" fill="url(#paint0_linear_94_115)" fill-opacity="0.3" transform="translate(4.8878 4.606)"/></g><defs><linearGradient id="paint0_linear_94_115" x1="4.888" x2="100" y1="24.585" y2="100.591" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>
+                        <p class="text-lg mt-4 text-primary-red">Generating personalized checklist...</p>
+                        <p class="text-sm text-gray-500">Using Google Search for latest gear recommendations.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function closeModal() {
+            checklistModal.classList.add('hidden');
+            modalContent.innerHTML = ''; // Clear content on close
+            citationFooter.classList.add('hidden');
+        }
+
+        // --- LLM API Call Function with Exponential Backoff ---
+        async function handleApiCall(payload, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        if (response.status === 429 && i < maxRetries - 1) {
+                            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            continue; // Retry
+                        }
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+
+                    return await response.json();
+
+                } catch (error) {
+                    if (i === maxRetries - 1) {
+                        throw new Error(`Final API call failed after ${maxRetries} retries: ${error.message}`);
+                    }
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        /**
+         * Generates a tour-specific gear checklist using the Gemini API.
+         * @param {string} tourName - The name of the tour (e.g., "Leh Ladakh Expedition").
+         * @param {string} conditions - The key conditions for the tour (e.g., "high-altitude cold weather").
+         */
+        async function generateChecklist(tourName, conditions) {
+            showLoading(tourName);
+
+            const systemPrompt = `You are a world-class adventure motorcycle outfitter. Your task is to generate a comprehensive, prioritized gear checklist for a rider undertaking a multi-day motorcycle tour. The list MUST be formatted as a detailed, numbered markdown list. Do not include any introductory or concluding text outside of the list itself. The list should be professional and safety-focused.`;
+            
+            const userQuery = `Create a comprehensive, safety-focused 10-item gear and packing checklist for the "${tourName}" adventure. The primary conditions for this tour are: ${conditions}.`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const result = await handleApiCall(payload);
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    let sources = [];
+
+                    // Extract and format grounding sources
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+                    }
+
+                    // Format output
+                    const formattedText = text.replace(/\n/g, '<br>'); // Simple line breaks for HTML display
+                    
+                    modalTitle.textContent = `✨ Essential Gear: ${tourName}`;
+                    modalContent.innerHTML = `<div class="p-4 bg-gray-900 rounded-lg">${formattedText}</div>`;
+
+                    // Display sources if available
+                    if (sources.length > 0) {
+                        sourceList.innerHTML = sources.map(s => 
+                            `<li><a href="${s.uri}" target="_blank" class="text-primary-red hover:underline">${s.title}</a></li>`
+                        ).join('');
+                        citationFooter.classList.remove('hidden');
+                    } else {
+                        citationFooter.classList.add('hidden');
+                    }
+
+                } else {
+                    modalTitle.textContent = "Error Generating Checklist";
+                    modalContent.innerHTML = `<p class="text-red-400">Could not retrieve a valid checklist. Please try again or contact support.</p>`;
+                }
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                modalTitle.textContent = "API Connection Error";
+                modalContent.innerHTML = `<p class="text-red-400">There was a problem connecting to the gear recommendation service. Check your console for details.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
