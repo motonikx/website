@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motonikx - Himalayan & Desert Adventure Touring</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a modern look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f87171; /* red-500 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* gray-800 */
+        }
+        .hero-bg {
+            /* Using multiple background images for a composite effect */
+            background-image: url('https://placehold.co/1920x800/27374D/ffffff?text=Himalayan+Road+Placeholder');
+            background-blend-mode: overlay;
+            background-color: rgba(15, 23, 42, 0.7); /* slate-900 overlay */
+        }
+
+        /* --- Custom CSS Variables from Road Trip Planner --- */
+        :root {
+            --color-primary: #f87171; /* Using Motonikx primary-red */
+            --color-primary-hover: #ef4444; /* red-600 */
+            --color-background: #1f2937; /* Dark Gray Background (gray-800 equivalent) */
+            --color-card: #374151; /* Slightly Lighter Dark Card Background (gray-700 equivalent) */
+            --color-text-light: #f3f4f6; /* Off-White Text */
+            --color-text-dim: #9ca3af; /* Subtle Gray Text */
+            --color-success: #10b981; /* Emerald for success actions */
+        }
+
+        /* Overrides/Styles for the Planner Section */
+        #planner-section select, #planner-section input {
+            background-color: var(--color-card);
+            color: var(--color-text-light);
+            border: 1px solid #4b5563; /* Gray-600 */
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: border-color 0.2s;
+        }
+
+        #planner-section select:focus, #planner-section input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        /* Pill Styling */
+        .pill {
+            cursor: pointer;
+            padding: 0.35rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .pill:hover {
+            transform: translateY(-1px);
+        }
+        .pill-active {
+            background-color: var(--color-primary);
+            color: #1f2937; /* Dark Background */
+            font-weight: 600;
+        }
+        .pill-inactive {
+            background-color: var(--color-card);
+            color: var(--color-text-dim);
+            border: 1px solid #4b5563;
+        }
+
+        /* Itinerary Card Styling */
+        .itinerary-card {
+            background-color: var(--color-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#f87171', // Tailwind red-500
+                        'accent-dark': '#0f172a', // Tailwind slate-900
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white antialiased">
+
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-3xl font-extrabold tracking-tight">
+                <span class="text-white">MOTO</span><span class="text-primary-red">NIKX</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#hero" class="hover:text-primary-red transition duration-300">Home</a>
+                <a href="#tours" class="hover:text-primary-red transition duration-300">Tours</a>
+                <a href="#planner" class="hover:text-primary-red transition duration-300">Planner</a>
+                <a href="#whyus" class="hover:text-primary-red transition duration-300">Why Us</a>
+                <a href="#contact" class="hover:text-primary-red transition duration-300">Book Now</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white p-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="relative overflow-hidden pt-24 md:pt-32 pb-24 bg-cover bg-center hero-bg">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-4 leading-tight">
+                    <span class="block text-white">CONQUER THE PEAKS.</span>
+                    <span class="block text-primary-red">MASTER THE DUNES.</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto">
+                    Motonikx is your ultimate guide to premium adventure motorcycle touring across the mighty **Himalayas** and the vibrant **Deserts of India**.
+                </p>
+                <a href="#tours" class="inline-block px-10 py-4 bg-primary-red text-white font-bold text-lg uppercase rounded-full shadow-lg hover:bg-red-600 transition duration-300 transform hover:scale-105">
+                    Find Your Adventure Tour
+                </a>
+            </div>
+        </section>
+
+        <section id="whyus" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-4">Why Ride With Motonikx?</h2>
+                <p class="text-center text-gray-400 mb-12 max-w-4xl mx-auto">We blend vintage racing ethos with modern logistics to deliver an unforgettable, safe, and truly authentic experience.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.93V14.5l-2.08-1.56-1.92 1.56L7 14.94l2.08-1.56L7 11.82l1.92-1.56L11 11.82V7h2v6.82l2.08 1.56-1.92 1.56L13 14.5v3.43c-3.95-.49-7-3.84-7-7.93h2c0 3.32 2.68 6 6 6v2.93z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Veteran Leadership</h3>
+                        <p class="text-gray-400">Led by local experts and professional mechanics, our guides possess intimate knowledge of high-altitude and desert riding conditions.</p>
+                    </div>
+
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M21 3L3 10.5h15L3 21l18-7.5H6z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Curated Expeditions</h3>
+                        <p class="text-gray-400">We take you beyond the postcards, exploring hidden trails in Uttarakhand, the remote beauty of Himachal, and the legendary passes of Leh Ladakh.</p>
+                    </div>
+
+                    <div class="p-8 bg-gray-900 rounded-xl shadow-2xl transition duration-500 hover:shadow-primary-red/50">
+                        <div class="text-primary-red mb-4">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14h2v2h-2v-2zm0-8h2v6h-2V7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Full Logistical Support</h3>
+                        <p class="text-gray-400">Enjoy the ride with peace of mind. Our tours include comprehensive backup vehicles, medical emergency support, and high-quality bike rentals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Epic Tour Destinations</h2>
+                <p class="text-center text-gray-400 mb-16 max-w-4xl mx-auto">Choose your terrain: from the highest motorable roads in the world to the timeless sands of the Thar Desert.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/4B5563/ffffff?text=Leh+Ladakh+Expedition" alt="Leh Ladakh Expedition" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Leh Ladakh Expedition</h3>
+                            <p class="text-gray-300 text-sm mb-4">Conquer Khardung La and Zojila. High-altitude adventure in the trans-Himalayan desert.</p>
+                            <button class="w-full py-2 bg-gray-700 rounded-lg hover:bg-primary-red transition duration-300 font-medium mt-2">View Route Details</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/FBBF24/1F2937?text=Rajasthan+Desert+Safari" alt="Rajasthan Desert Safari" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Rajasthan Desert Safari</h3>
+                            <p class="text-gray-300 text-sm mb-4">Golden dunes, ancient forts, and vibrant Rajasthani culture. A ride through history.</p>
+                            <button class="w-full py-2 bg-gray-700 rounded-lg hover:bg-primary-red transition duration-300 font-medium mt-2">View Route Details</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/10B981/ffffff?text=Himachal+Traverse" alt="Himachal Pradesh Traverse" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Himachal Pradesh Traverse</h3>
+                            <p class="text-gray-300 text-sm mb-4">The raw, untouched beauty of Spiti and Lahaul Valley on two wheels.</p>
+                            <button class="w-full py-2 bg-gray-700 rounded-lg hover:bg-primary-red transition duration-300 font-medium mt-2">View Route Details</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl group">
+                        <img src="https://placehold.co/400x300/3B82F6/ffffff?text=Uttarakhand+Himalayas" alt="Uttarakhand Himalayan Trails" class="w-full h-48 object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-primary-red">Uttarakhand Trails</h3>
+                            <p class="text-gray-300 text-sm mb-4">Deep forest trails and panoramic views in the 'Devbhoomi' (Land of the Gods).</p>
+                            <button class="w-full py-2 bg-gray-700 rounded-lg hover:bg-primary-red transition duration-300 font-medium mt-2">View Route Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-primary-red/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <blockquote class="max-w-4xl mx-auto">
+                    <p class="text-3xl sm:text-4xl font-light italic text-gray-200 mb-6">
+                        "Motonikx didn't just organize a trip, they curated a life-changing expedition. The local knowledge and safety support were impeccable."
+                    </p>
+                    <footer class="text-lg font-semibold text-primary-red">- Sophie L., International Rider, Leh Ladakh 2024</footer>
+                </blockquote>
+                <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-primary-red text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition duration-300">
+                    Book Your Seat Now
+                </a>
+            </div>
+        </section>
+
+        <section id="planner" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center pb-8 border-b border-gray-700">
+                    <h2 class="text-4xl font-bold text-white mb-2">🇮🇳 Custom India Road Trip Planner</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Map your dream route before you book a guided tour. Select regions to explore destinations and plan your distance.</p>
+                </header>
+
+                <div id="planner-section" class="max-w-4xl mx-auto space-y-8 pt-8">
+
+                    <section class="space-y-4">
+                        <h3 class="text-xl font-semibold text-primary-red">1. Select Regions</h3>
+                        <div id="region-pills" class="flex flex-wrap gap-3">
+                            </div>
+                    </section>
+
+                    <section class="space-y-4">
+                        <h3 class="text-xl font-semibold text-primary-red">2. Explore Destinations</h3>
+                        <div id="destination-list" class="space-y-6 p-4 bg-gray-800 rounded-xl">
+                            </div>
+                    </section>
+                    
+                    <section class="space-y-4 pt-4 border-t border-gray-700">
+                        <h3 class="text-xl font-semibold text-primary-red">3. Plan Your Route</h3>
+                        
+                        <div class="flex space-x-6 text-sm">
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="tripType" value="one-way" checked class="text-primary-red bg-gray-700 border-gray-600 focus:ring-primary-red">
+                                <span class="text-gray-300">One-Way Trip</span>
+                            </label>
+                            <label class="flex items-center space-x-2 cursor-pointer">
+                                <input type="radio" name="tripType" value="round-trip" class="text-primary-red bg-gray-700 border-gray-600 focus:ring-primary-red">
+                                <span class="text-gray-300">Round Trip (Same Start/End)</span>
+                            </label>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="flex flex-col space-y-1">
+                                <label for="origin-select" class="text-sm font-medium text-gray-400">Start City (Origin)</label>
+                                <select id="origin-select" class="w-full">
+                                    </select>
+                            </div>
+                            
+                            <div class="flex flex-col space-y-1">
+                                <label for="destination-select" class="text-sm font-medium text-gray-400">End City (Destination)</label>
+                                <select id="destination-select" class="w-full">
+                                    </select>
+                            </div>
+
+                            <div class="flex flex-col justify-end">
+                                <button id="plan-route-btn" class="w-full py-2 px-4 rounded-lg font-semibold bg-gray-500 text-gray-800 cursor-not-allowed transition-colors" disabled>
+                                    Plan Route
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="space-y-4 pt-4 border-t border-gray-700">
+                        <h3 class="text-xl font-semibold text-primary-red">4. Your Estimated Itinerary</h3>
+                        <div id="itinerary-output" class="itinerary-card space-y-4">
+                            <p id="itinerary-text" class="text-gray-400 text-sm italic">
+                                Select an Origin and Destination above and click 'Plan Route' to generate a sample itinerary.
+                            </p>
+                            <button id="copy-itinerary" class="py-2 px-4 rounded-lg text-sm font-semibold bg-emerald-500 hover:bg-emerald-600 text-gray-900 transition-colors hidden">
+                                Copy Itinerary Text
+                            </button>
+                        </div>
+                    </section>
+
+                    <div id="custom-message-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+                        <div class="bg-gray-700 rounded-xl p-6 shadow-2xl max-w-sm w-full space-y-4">
+                            <h4 id="modal-title" class="text-xl font-bold text-primary-red"></h4>
+                            <p id="modal-body" class="text-gray-300"></p>
+                            <div class="flex justify-end">
+                                <button id="modal-close-btn" class="py-2 px-4 rounded-lg bg-primary-red hover:bg-red-600 text-white font-semibold">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12">Start Your Expedition</h2>
+                <p class="text-center text-gray-400 mb-8 max-w-xl mx-auto">Ready to ride? Tell us which tour you are interested in and we'll send you a detailed itinerary and gear checklist.</p>
+
+
+                <div class="max-w-2xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                        </div>
+                        <div>
+                            <label for="tour" class="block text-sm font-medium text-gray-300 mb-1">Interested Tour</label>
+                            <select id="tour" name="tour" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white" required>
+                                <option value="" disabled selected>Select an adventure...</option>
+                                <option value="leh-ladakh">Leh Ladakh Expedition</option>
+                                <option value="rajasthan">Rajasthan Desert Safari</option>
+                                <option value="himachal">Himachal Pradesh Traverse</option>
+                                <option value="uttarakhand">Uttarakhand Trails</option>
+                                <option value="custom">Custom/Private Tour</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Additional Comments</label>
+                            <textarea id="message" name="message" rows="4" placeholder="I have 3 riders in my group and need bike rentals..." class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-red focus:ring focus:ring-primary-red/50 transition duration-200 text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-primary-red text-white font-bold text-lg rounded-lg shadow-md hover:bg-red-600 transition duration-300 transform hover:scale-[1.01]">
+                            Send Inquiry
+                        </button>
+                        <p class="text-center text-xs text-gray-500 mt-4">We cater to national and international riders.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-accent-dark py-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="mb-4">
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">FAQ & Permits</a>
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">Gear Checklist</a>
+                <a href="#" class="mx-3 hover:text-primary-red transition duration-300">Community Forum</a>
+            </div>
+            <p class="text-sm">&copy; 2025 Motonikx. All Rights Reserved. Your Journey Starts Here.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="fixed bottom-6 right-6 p-3 bg-primary-red rounded-full shadow-lg hover:bg-red-600 transition duration-300 opacity-0 pointer-events-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        // --- Data Definitions (from index.txt.txt) ---
+
+        // Universal Gateway cities (big metro cities typically with good connectivity)
+        const GATEWAYS = [
+            { id: 'delhi', name: 'New Delhi (Universal Gateway)', coordinates: [28.6139, 77.2090], state: 'Delhi', region: 'Northern Himalayas' },
+            { id: 'mumbai', name: 'Mumbai (Universal Gateway)', coordinates: [19.0760, 72.8777], state: 'Maharashtra', region: 'Western Coast' },
+            { id: 'kolkata', name: 'Kolkata (Universal Gateway)', coordinates: [22.5726, 88.3639], state: 'West Bengal', region: 'Eastern Ghats' },
+            { id: 'chennai', name: '
